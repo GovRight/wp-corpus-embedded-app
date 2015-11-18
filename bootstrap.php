@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: GovRight Corpus embedded helper
+Plugin Name: GovRight Corpus Embedded Apps
 Plugin URI: https://github.com/GovRight/wp-corpus-embedded-helper
 Description:
 Version: 1.0.0
