@@ -1,2 +1,1 @@
-# wp-corpus-embedded-helper
-Helper plugin for embedded angular apps.
+# GovRight Corpus embedded helper
