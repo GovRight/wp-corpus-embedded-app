@@ -24,3 +24,20 @@ There are two ways to insert the app into your site
 
 1. In a post/page text using the `[corpus-app]` shortcode
 2. In a template using this snippet `<?php corpus_app(); ?>`
+
+# Local development
+
+Most likely app urls in your local environment look like `localhost:9000`. You can override app urls and
+any other config items adding a snippet like this to you local `wp-config.php`:
+
+```php
+$GLOBALS['WPCE_LOCAL_CONFIG'] = array(
+    'rev-tracker' => array(
+        'auth_post_url' => 'http://localhost:9000/auth/success'
+        'loader_url' => 'http://localhost:9000/loader.js',
+    )
+);
+```
+
+Items from `$GLOBALS['WPCE_LOCAL_CONFIG']` override default plugin config, check `includes/config.php` for better
+insight of the plugin config structure.
