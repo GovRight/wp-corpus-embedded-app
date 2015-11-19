@@ -32,7 +32,7 @@ function wpce_settings_init(  ) {
 
     add_settings_section(
         'wpce_settings_shortcode_section',
-        __( 'Shortcode settings', 'wpce' ),
+        __( 'Loader settings', 'wpce' ),
         'wpce_settings_shortcode_section',
         'wpce_settings_page'
     );
@@ -64,7 +64,9 @@ function wpce_app_render()
 }
 
 function wpce_settings_shortcode_section() {
-    echo 'Shortcode: <code>[corpus-app]</code>';
+    echo 'Insert the application: <br>
+1. In a post/page text using the shortcode: <code>[corpus-app]</code> <br>
+2. In a template using the snippet: <code>&lt;?php corpus_app(); ?&gt;</code>';
 }
 
 function wpce_law_slug_render()

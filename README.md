@@ -23,4 +23,4 @@ Provides easy app setup and automates some things like authentication callback a
 There are two ways to insert the app into your site
 
 1. In a post/page text using the `[corpus-app]` shortcode
-2. In the template using this snippet `<?php corpus_app(); ?>`
+2. In a template using this snippet `<?php corpus_app(); ?>`
