@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: GovRight Corpus Embedded App
-Plugin URI: https://github.com/GovRight/wp-corpus-embedded-helper
+Plugin URI: https://github.com/GovRight/wp-corpus-embedded-app
 Description: Plugin to help you to embed a GovRight application into your site. Provides easy app setup and automates some things like authentication callback and social sharing.
 Version: 1.0.0
 Author: GovRight
