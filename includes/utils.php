@@ -30,7 +30,13 @@ function wpce_apps() {
 function wpce_get_loader() {
     $loader_url = wpce_config('loader_url');
     if(empty($loader_url)) {
-        return '';
+        $app_name = wpce_config('name');
+        if(empty($app_name)) {
+            $message = 'GovRight embedded app is not selected. Select an application in the plugin settings.';
+        } else {
+            $message = 'Can\'t load the ' . $app_name . ' application, app config is invalid.';
+        }
+        return '<script>console.warn("' . $message . '");</script>';
     }
     $law_slug = get_option('wpce_law_slug');
     return '<script src="' . $loader_url . '" data-law-slug="' . $law_slug . '"></script>';
