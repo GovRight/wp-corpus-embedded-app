@@ -16,11 +16,11 @@ add_action('plugins_loaded', function() {
 
         $response = wp_remote_get($social_url . $path);
 
-        if(is_wp_error($response)) {
-            echo $response->get_error_message();;
-        } else {
+        // In case of error or something just show a Wordpress page
+        // At least something will be displayed
+        if(!is_wp_error($response) && !empty($response['body'])) {
             echo $response['body'];
+            die;
         }
-        die;
     }
 });
