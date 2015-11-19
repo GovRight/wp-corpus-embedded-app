@@ -14,7 +14,7 @@ add_action('plugins_loaded', function() {
             $path = $_GET['_escaped_fragment_'];
         }
 
-        $response = wp_remote_get($social_url . $path);
+        $response = wp_remote_get($social_url . '?path=' . $path);
 
         // In case of error or something just show a Wordpress page
         // At least something will be displayed
