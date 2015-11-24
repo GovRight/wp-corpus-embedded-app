@@ -7,6 +7,8 @@ Version: 1.0.1
 Author: GovRight
 Author URI: http://govright.org/
 License: MIT
+GitHub Plugin URI: https://github.com/afragen/github-updater
+GitHub Branch: master
 */
 
 require_once(__DIR__ . '/includes/utils.php');
