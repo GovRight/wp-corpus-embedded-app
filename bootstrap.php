@@ -7,7 +7,7 @@ Version: 1.0.1
 Author: GovRight
 Author URI: http://govright.org/
 License: MIT
-GitHub Plugin URI: https://github.com/afragen/github-updater
+GitHub Plugin URI: https://github.com/GovRight/wp-corpus-embedded-app
 GitHub Branch: master
 */
 
