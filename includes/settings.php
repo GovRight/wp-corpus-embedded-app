@@ -39,7 +39,7 @@ function wpce_settings_init(  ) {
 
     add_settings_field(
         'wpce_law_slug',
-        __( 'Embedded law/comparison slug' ),
+        __( 'Law/comparison slug' ),
         'wpce_law_slug_render',
         'wpce_settings_page',
         'wpce_settings_shortcode_section'
