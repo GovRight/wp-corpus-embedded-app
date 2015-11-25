@@ -8,10 +8,7 @@ $WPCE_CONFIG = array(
         'law_route' => '/law/'
     ),
     'impact-project' => array(
-        'name' => 'Law Impact Project'
-    ),
-    'legislation-lab' => array(
-        'name' => 'Legislation Lab'
+        'name' => 'Legal Impact Watch'
     )
 );
 

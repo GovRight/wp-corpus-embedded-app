@@ -39,7 +39,7 @@ function wpce_settings_init(  ) {
 
     add_settings_field(
         'wpce_law_slug',
-        __( 'Embedded law slug' ),
+        __( 'Embedded law/comparison slug' ),
         'wpce_law_slug_render',
         'wpce_settings_page',
         'wpce_settings_shortcode_section'
@@ -79,14 +79,10 @@ function wpce_law_slug_render()
 
 function wpce_options_page() { ?>
     <form action='options.php' method='post'>
-
         <h2>GovRight Embedded App</h2>
-
         <?php
         settings_fields( 'wpce_settings_page' );
         do_settings_sections( 'wpce_settings_page' );
-        submit_button();
-        ?>
-
+        submit_button(); ?>
     </form>
 <?php } ?>
