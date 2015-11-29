@@ -1,7 +1,7 @@
 # GovRight Corpus Embedded App Helper
 
-Plugin to help you to embed a GovRight application into your site.
-Provides easy app setup and automates some things like authentication callback and social sharing.
+A plugin to help you to embed a GovRight AngularJS app into your site.
+Provides an easy app setup and automates some things like authentication callback and social sharing.
 
 ## Functionality
 
