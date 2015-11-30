@@ -56,11 +56,11 @@ function wpce_atts_string($atts) {
     if(empty($atts)) {
         return '';
     }
-    $string = '';
+    $strings = array();
     foreach ($atts as $key => $val) {
-        $string .= $key . '="' . $val . '" ';
+        $strings[] = $key . '="' . $val . '"';
     }
-    return $string;
+    return implode(' ', $strings);
 }
 
 /**
