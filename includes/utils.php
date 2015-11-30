@@ -46,7 +46,7 @@ function wpce_get_loader($atts = array()) {
         $atts['data-law-slug'] = $law_slug;
     }
 
-    return '<script src="' . $loader_url . '" ' . wpce_atts_string($atts) . '"></script>';
+    return '<script src="' . $loader_url . '" ' . wpce_atts_string($atts) . '></script>';
 }
 
 /**
