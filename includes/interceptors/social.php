@@ -1,6 +1,6 @@
 <?php
 add_action('plugins_loaded', function() {
-    if(!isset($_GET['_escaped_fragment_'])) {
+    if(isset($_GET['_escaped_fragment_'])) {
         $social_url = wpce_config('social_url');
         $law_slug = trim(get_option('wpce_law_slug'));
         if(empty($social_url)) {
