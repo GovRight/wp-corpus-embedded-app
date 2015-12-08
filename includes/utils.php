@@ -54,7 +54,10 @@ function wpce_get_loader($atts = array()) {
  */
 function wpce_atts_string($atts) {
     if(empty($atts)) {
-        return '';
+        $atts = array();
+    }
+    if(empty($atts['data-locale']) && defined('ICL_LANGUAGE_CODE')) {
+        $atts['data-locale'] = ICL_LANGUAGE_CODE;
     }
     $strings = array();
     foreach ($atts as $key => $val) {
