@@ -33,7 +33,7 @@ There are two ways to insert the app into your site
 
 These can also be passed to the `corpus_app()` function as an array, like
 
-```
+```php
 <?php corpus_app(array(
   'data-locale' => 'en',
   'data-app-port' => 9000
