@@ -25,6 +25,21 @@ There are two ways to insert the app into your site
 1. In a post/page text using the shortcode: `[corpus-app]`
 2. In a template using the snippet: `<?php corpus_app(); ?>`
 
+## Shortcode attributes
+
+* `data-locale` - locale code like `en`, `ru`, etc, to set initial app locale
+* `data-app-port` - app port number like `9000`, for local development
+* `data-law-slug` - law slug, overrides the law slug set in plugin options in wp admin
+
+These can also be passed to the `corpus_app()` function as an array, like
+
+```
+<?php corpus_app(array(
+  'data-locale' => 'en',
+  'data-app-port' => 9000
+)); ?>
+```
+
 ## Local development
 
 Most likely app urls in your local environment look like `localhost:9000`. You can override app urls and
