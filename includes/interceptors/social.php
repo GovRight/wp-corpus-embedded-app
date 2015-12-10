@@ -8,7 +8,7 @@ add_action('plugins_loaded', function() {
         }
 
         // _escaped_fragment_ usually goes first
-        $fragment = str_replace('_escaped_fragment_=', '', $_SERVER['QUERY_STRING']);
+        $fragment = urldecode(str_replace('_escaped_fragment_=', '', $_SERVER['QUERY_STRING']));
 
         if(!empty($law_slug)) {
             $law_route = '/' . trim(wpce_config('law_route'), '/') . '/';
