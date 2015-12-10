@@ -6,15 +6,24 @@ add_action('plugins_loaded', function() {
         if(empty($social_url)) {
             return;
         }
+        $fragment = $_GET['_escaped_fragment_'];
 
         if(!empty($law_slug)) {
             $law_route = '/' . trim(wpce_config('law_route'), '/') . '/';
-            $path = $law_route . $law_slug . $_GET['_escaped_fragment_'];
+            if($fragment[1] === '?' || $fragment === '/') {
+                $fragment = ltrim($fragment, '/');
+            }
+            $path = $law_route . $law_slug . $fragment;
         } else {
-            $path = $_GET['_escaped_fragment_'];
+            $path = $fragment;
         }
 
-        $response = wp_remote_get($social_url . '?path=' . $path);
+        $url = $social_url . '?path=' . $path;
+        $port = parse_url($social_url, PHP_URL_PORT);
+        if($port) {
+            $url .= '&port=' . $port;
+        }
+        $response = wp_remote_get($url, array('timeout' => 10));
 
         // In case of error or something just show a Wordpress page
         // At least something will be displayed
