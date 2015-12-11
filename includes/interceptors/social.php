@@ -6,12 +6,12 @@ add_action('plugins_loaded', function() {
         if(empty($social_url)) {
             return;
         }
-
         // _escaped_fragment_ usually goes first
         $fragment = urldecode(str_replace('_escaped_fragment_=', '', $_SERVER['QUERY_STRING']));
+        $locale = defined('ICL_LANGUAGE_CODE') && ICL_LANGUAGE_CODE ? ICL_LANGUAGE_CODE : 'en';
 
         if(!empty($law_slug)) {
-            $law_route = '/' . trim(wpce_config('law_route'), '/') . '/';
+            $law_route = '/' . $locale . '/' . trim(wpce_config('law_route'), '/') . '/';
             if($fragment[1] === '?' || $fragment === '/') {
                 $fragment = ltrim($fragment, '/');
             }
