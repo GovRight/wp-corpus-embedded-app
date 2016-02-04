@@ -32,6 +32,8 @@ add_action('plugins_loaded', function() {
         if(!is_wp_error($response) && !empty($response['body'])) {
             echo $response['body'];
             die;
+        } else {
+            error_log('FAILED RESPONSE wp-corpus-embedded-app:/interceptors/social: ' . print_r($response));
         }
     }
 });
