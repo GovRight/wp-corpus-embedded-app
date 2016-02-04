@@ -72,3 +72,17 @@ function wpce_atts_string($atts) {
 function corpus_app($atts = array()) {
     echo wpce_get_loader($atts);
 }
+
+function wpce_normalize_urls($url, $is_query = false) {
+    if(is_array($url)) {
+        return array_map('wpce_normalize_urls', $url);
+    } else {
+        if($is_query) {
+            $url = array_shift(explode('?', $url));
+        }
+        if($url === '/') {
+            return '/';
+        }
+        return '/' . trim($url, '/ ') . '/';
+    }
+}

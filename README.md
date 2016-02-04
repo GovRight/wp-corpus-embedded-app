@@ -40,6 +40,17 @@ These can also be passed to the `corpus_app()` function as an array, like
 )); ?>
 ```
 
+## Hooks
+
+* `wpce_social_urls_white_list` | Filter | Is used to make changes to the social interceptor white list.
+  Example:
+
+```php
+add_filter('wpce_social_urls_white_list', function() {
+    return array('/', '/en', '/fr', '/ar');
+});
+```
+
 ## Local development
 
 Most likely app urls in your local environment look like `localhost:9000`. You can override app urls and
